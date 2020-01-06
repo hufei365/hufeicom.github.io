@@ -80,14 +80,14 @@
 
 
 <meta name="description" content="为什么要有复用？直白地说即使DRY（Don’t repeat yourself)。  避免重写逻辑本身，并允许有状态逻辑的不同部分能无缝地进行协同工作。  复用的几种模式： mixin HOC(High Order Component) render props&#x2F; renderless component&#x2F; slots hooks  复用解决的问题是什么？答案很明显，DRY（Don’t repea">
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:title" content="逻辑复用——mixin，HOC，render props，Hooks">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;%E9%80%BB%E8%BE%91%E5%A4%8D%E7%94%A8%E2%80%94%E2%80%94mixin%EF%BC%8CHOC%EF%BC%8Crender%20props%EF%BC%8CHooks.html">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;01&#x2F;06&#x2F;%E9%80%BB%E8%BE%91%E5%A4%8D%E7%94%A8%E2%80%94%E2%80%94mixin%EF%BC%8CHOC%EF%BC%8Crender%20props%EF%BC%8CHooks&#x2F;index.html">
 <meta property="og:site_name" content="胡斐&#39;blog">
 <meta property="og:description" content="为什么要有复用？直白地说即使DRY（Don’t repeat yourself)。  避免重写逻辑本身，并允许有状态逻辑的不同部分能无缝地进行协同工作。  复用的几种模式： mixin HOC(High Order Component) render props&#x2F; renderless component&#x2F; slots hooks  复用解决的问题是什么？答案很明显，DRY（Don’t repea">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-01-06T12:47:12.342Z">
-<meta property="article:modified_time" content="2020-01-06T12:47:12.342Z">
+<meta property="article:published_time" content="2020-01-06T12:46:37.089Z">
+<meta property="article:modified_time" content="2020-01-06T13:16:40.541Z">
 <meta property="article:author" content="HuFei">
 <meta property="article:tag" content="胡斐">
 <meta name="twitter:card" content="summary">
@@ -120,7 +120,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/逻辑复用——mixin，HOC，render props，Hooks.html"/>
+  <link rel="canonical" href="http://yoursite.com/2020/01/06/逻辑复用——mixin，HOC，render props，Hooks/"/>
 
 
 
@@ -221,24 +221,86 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/06/%E9%80%BB%E8%BE%91%E5%A4%8D%E7%94%A8%E2%80%94%E2%80%94mixin%EF%BC%8CHOC%EF%BC%8Crender%20props%EF%BC%8CHooks/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="HuFei">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar-128.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="胡斐'blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">逻辑复用——mixin，HOC，render props，Hooks</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <p>为什么要有复用？直白地说即使DRY（Don’t repeat yourself)。</p>
+          <h1 class="post-title" itemprop="name headline">逻辑复用——mixin，HOC，render props，Hooks</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-06T20:46:37+08:00">
+                2020-01-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>为什么要有复用？直白地说即使DRY（Don’t repeat yourself)。</p>
 <blockquote>
 <p>避免重写逻辑本身，并允许有状态逻辑的不同部分能无缝地进行协同工作。</p>
 </blockquote>
@@ -295,15 +357,65 @@
 <li>写法有限制，不能出现在条件和循环语句当中（有了条件以后，会影响逻辑单元内部的状态设置）</li>
 </ol>
 
-        
-      </div>
-      
-      
       
     </div>
     
     
     
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/wechat-qrcode.jpg" alt="HuFei wechat" style="width: 200px; max-width: 100%;"/>
+    <div>欢迎您扫一扫上面的微信公众号，订阅我的博客!</div>
+</div>
+
+      </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/16/toString-and-valueOf/" rel="next" title="探究JavaScript中的valueOf和toString">
+                <i class="fa fa-chevron-left"></i> 探究JavaScript中的valueOf和toString
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -365,7 +477,7 @@
               
                 <a href="/archives/%7C%7Carchive">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
