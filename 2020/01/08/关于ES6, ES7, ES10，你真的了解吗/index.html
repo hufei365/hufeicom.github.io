@@ -79,12 +79,12 @@
 
 
 
-<meta name="description" content="什么是 JavaScript？根据维基百科，它是符合ECMAScript规范的脚本语言。ES6、ES7等，你可能听说过这些名词，你很可能也使用 ES6 一段时间了（在许多情况下借助Babel）。 我相信你们大多数人在使用许多ES6中的新特性时，而不会问自己：这真的是ES6吗？，这是否仍然是一个浏览器不支持功能？我们对Babel转译的了解有多少，又有多少不了解？你否已经更新了有关ES中内容的知识？自">
+<meta name="description" content="什么是 JavaScript？根据维基百科，它是符合ECMAScript规范的脚本语言。ES6、ES7等，你可能听说过这些名词，你很可能也使用 ES6 一段时间了（在许多情况下借助Babel）。 我相信你们大多数人在使用许多ES6中的新特性时，而不会问自己">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【译】关于ES6, ES7, ES10，你真的了解吗">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;01&#x2F;08&#x2F;%E5%85%B3%E4%BA%8EES6,%20ES7,%20ES10%EF%BC%8C%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BA%86%E8%A7%A3%E5%90%97&#x2F;index.html">
 <meta property="og:site_name" content="胡斐&#39;blog">
-<meta property="og:description" content="什么是 JavaScript？根据维基百科，它是符合ECMAScript规范的脚本语言。ES6、ES7等，你可能听说过这些名词，你很可能也使用 ES6 一段时间了（在许多情况下借助Babel）。 我相信你们大多数人在使用许多ES6中的新特性时，而不会问自己：这真的是ES6吗？，这是否仍然是一个浏览器不支持功能？我们对Babel转译的了解有多少，又有多少不了解？你否已经更新了有关ES中内容的知识？自">
+<meta property="og:description" content="什么是 JavaScript？根据维基百科，它是符合ECMAScript规范的脚本语言。ES6、ES7等，你可能听说过这些名词，你很可能也使用 ES6 一段时间了（在许多情况下借助Babel）。 我相信你们大多数人在使用许多ES6中的新特性时，而不会问自己">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;1_9wIhMZZmOeXD89AAK9YN5g.gif">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;1__VevwBF-xSrxusgjH0rbHw.png">
@@ -93,7 +93,7 @@
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;1_Dg-sMs4-Pz9QmrHPTjk9uA.png">
 <meta property="og:image" content="http:&#x2F;&#x2F;yoursite.com&#x2F;images&#x2F;0_0WR7Q_x_T6HzNckd.gif">
 <meta property="article:published_time" content="2020-01-08T14:21:31.610Z">
-<meta property="article:modified_time" content="2020-01-08T14:53:53.840Z">
+<meta property="article:modified_time" content="2020-01-08T23:07:31.937Z">
 <meta property="article:author" content="HuFei">
 <meta property="article:tag" content="胡斐">
 <meta name="twitter:card" content="summary">
@@ -308,7 +308,7 @@
 
       
         <p><img src="/images/1_9wIhMZZmOeXD89AAK9YN5g.gif" alt="js-babel"><br><strong>什么是 JavaScript？</strong>根据维基百科，它是符合ECMAScript规范的脚本语言。ES6、ES7等，你可能听说过这些名词，你很可能也使用 ES6 一段时间了（在许多情况下借助Babel）。</p>
-<p>我相信你们大多数人在使用许多ES6中的新特性时，而不会问自己：这真的是ES6吗？，这是否仍然是一个浏览器不支持功能？我们对Babel转译的了解有多少，又有多少不了解？你否已经更新了有关ES中内容的知识？自从ES6的第一个提案以来，有哪些内容已删除？自最初的ES7提案以来，又添加了哪些内容？</p>
+<p>我相信你们大多数人在使用许多ES6中的新特性时，而不会问自己<a id="more"></a>：这真的是ES6吗？，这是否仍然是一个浏览器不支持功能？我们对Babel转译的了解有多少，又有多少不了解？你否已经更新了有关ES中内容的知识？自从ES6的第一个提案以来，有哪些内容已删除？自最初的ES7提案以来，又添加了哪些内容？</p>
 <p>因为我相信每个人都关心当我们何时可以在JS中使用<code>replaceAll</code>函数，让我们坐下来回顾一下ES当前的状态。从Babel和ES6的诞生以来，哪些已经被写到规范中？读完本文后，你将成为 ES-10/10！（对不起，这是我最好的一个！）</p>
 <h2 id="一些历史和科普"><a href="#一些历史和科普" class="headerlink" title="一些历史和科普"></a>一些历史和科普</h2><p>让我们准备回到过去吧！如果你和我一样，第一次听说ES6和Babel是在2014-2015年左右，你很可能仍然认为事情或多或少在同一个地方。这已经足够公平了，因为多亏了Babel，我们很少关心幕后到底发生了什么。但是，正如你想象的那样，Babel 允许我们使用这些”proposal stage”功能，这些功能在可用之前，在 5 年内没有保持”建议阶段”功能。</p>
 <p>为了在撰写本文时停止使用引号引起来的”建议阶段”（在键入时很难用引号引起来），最好让你了解JS不同阶段的功能是很重要的。</p>
